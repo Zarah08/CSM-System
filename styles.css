@@ -1,0 +1,109 @@
+/* Ensure content does not overlap the navbar */
+body {
+    padding-top: 60px; /* Adjusts space for fixed navbar */
+    background-color: #f8f9fa;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #3366ff;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    font-family: 'Inter', sans-serif;
+    z-index: 1000;
+}
+
+/* Sidebar Links */
+.sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Hover and Active Styles */
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-left: 4px solid white;
+    font-weight: bold;
+}
+
+/* Navbar Fix */
+.navbar {
+    z-index: 1050; /* Ensures navbar stays on top */
+}
+
+/* Ensure content starts after sidebar */
+.content {
+    margin-left: 250px; /* Adjust based on sidebar width */
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+/* Ensure content doesn't overlap sidebar and navbar */
+body {
+    padding-top: 60px; /* Adjusts space for navbar */
+    background-color: #f8f9fa;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px; /* Ensures space for sidebar */
+    height: 100vh;
+    background-color: #3366ff;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    z-index: 1000;
+}
+
+/* Main content area */
+.content {
+    margin-left: 260px; /* Moves content right, ensuring it does not overlap sidebar */
+    padding: 20px;
+    width: calc(100% - 260px);
+}
+
+/* Form Styling */
+.form-container {
+    max-width: 800px; /* Restrict form width */
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure inputs are responsive */
+.form-control {
+    width: 100%;
+}
+
+/* Fix select box height */
+.select2-container .select2-selection--multiple {
+    min-height: 50px;
+}
+
+/* Fix Delete Buttons */
+.btn-danger {
+    font-size: 14px;
+}
